@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Producto</title>
+    <link rel="stylesheet" href="{%static "css/bootstrap.min.css"%}">
+
+</head>
+<body>
+    &nbsp;
+    <div class="container text-center">
+        <div class="row">
+          <div class="col">
+            
+          </div>
+          <div class="col-6">
+            <h3>Tienda de disfraces</h3>
+          </div>
+          <div class="col">
+            
+          </div>
+        </div>
+        &nbsp;
+        {% if check %}
+        &nbsp;
+        <div class="row">
+          <div class="col">
+            <img src="{%static "images/fantasma.png"%}">
+          </div>
+          <div class="col-6">
+            
+          </div>
+          <div class="col">
+            &nbsp;
+            <h5>Nombre: Fantasma</h5>
+            <br>
+            <h5>Precio: $5000 </h5>
+            <br>
+            <h5>Talla: S </h5>
+          </div>
+        </div>
+        {% elif calabaza %}
+        &nbsp;
+        <div class="row">
+          <div class="col">
+            <img src="{%static "images/picolo.jpg"%}" width="450px">
+          </div>
+          <div class="col-6">
+            
+          </div>
+          <div class="col">
+            &nbsp;
+            <h5>Nombre: Piccolo</h5>
+            <br>
+            <h5>Precio: $20000 </h5>
+            <br>
+            <h5>Talla: M </h5>
+          </div>
+        </div>
+        {% elif lobo %}
+        &nbsp;
+        <div class="row">
+          <div class="col">
+            <img src="{%static "images/pou.jpg"%}" width="300px">
+          </div>
+          <div class="col-6">
+            
+          </div>
+          <div class="col">
+            &nbsp;
+            <h5>Nombre: Pou</h5>
+            <br>
+            <h5>Precio: $40000 </h5>
+            <br>
+            <h5>Talla: L </h5>
+          </div>
+        </div>
+        {% else %}
+        Error
+        {%endif%}
+        <a href="{% url 'index' %}" type="button" class="btn btn btn-primary">volver al menu</a>
+      </div>
+      
+</body>
+</html>
